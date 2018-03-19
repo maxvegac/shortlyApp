@@ -1,5 +1,8 @@
 # ShortlyApp
 ShortlyApp is an URL shortener service that runs over Express and Angular 5
+
+[DEMO](https://zl.cl) --> [https://zl.cl](https://zl.cl)
+
   - It uses Firebase for Facebook authentication.
   - Uses Angular as frontend (we should use React right now but...).
   - Uses Express as backend.
