@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const http_1 = require("http");
+const server_1 = require("../dist/server");
+const sequelize_1 = require("../node_modules/sequelize");
+const port = process.env.PORT || 8080;
+(async () => {
+    await sequelize_1.sequelize.sync({ force: true });
+    http_1.createServer(server_1.app)
+        .listen(port, () => console.info(`Server running on port ${port}`));
+})();

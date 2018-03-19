@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Short URL</h1>
+  <form [formGroup]="URLForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>URL to Shortify</label>
+      <input type="text"
+             class="form-control"
+             formControlName="URLToShort"
+             required>
+    </div>
+    <div class="form-control-feedback alert-danger"
+         *ngIf="URLToShort.errors && (URLToShort.dirty || URLToShort.touched)">
+      <p *ngIf="URLToShort.errors.required">Check your input! It must be a valid URL!</p>
+    </div>
+    <div *ngIf="successMessage" class="alert-success">
+      <p>Congrats! 🎉 use the following link</p>
+      <p><a href="{{ successMessage }}" target="_blank">{{ successMessage }}</a></p>
+    </div>
+    <div *ngIf="errorMessage" class="alert-danger">
+      <p>{{ errorMessage }}</p>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Short my URL!</button>
+  </form>
+
+</div>

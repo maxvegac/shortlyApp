@@ -1,0 +1,10 @@
+
+<h4>Your URLs:</h4>
+
+<ul *ngIf="URLs && URLs.length > 0">
+  <div *ngFor="let URL of URLs">
+    <ngb-alert type="info" [dismissible]="false">
+      <span style="text-align: left"><a href="{{URL.shortURL}}" target="_blank">{{URL.shortURL}}</a></span> redirects to <span style="text-align: right"><a href="{{URL.originalURL}}" target="_blank">{{URL.originalURL}}</a></span>
+    </ngb-alert>
+  </div>
+</ul>

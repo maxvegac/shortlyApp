@@ -1,0 +1,7 @@
+dist
+angular/dist
+package-lock.json
+node_modules
+angular/node_modules
+src/config.ts
+src/firebase-config.json
